@@ -1,0 +1,197 @@
+/* General Reset */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+  background-color: #fff;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  backdrop-filter: blur(10px);
+  z-index: 999;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.toggle-theme {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url("./download.jpeg"); /* غيّر اسم الصورة حسب ما عندك */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  color: #fff;
+}
+
+/* طبقة تظليل لو الصورة فاتحة */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* تخلي النص واضح فوق الصورة */
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.about-section {
+  background-color: #f8f9fa;
+  padding: 60px 30px;
+  text-align: center;
+}
+
+.about-section h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.about-content {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #555;
+}
+
+.dark-mode .about-section {
+  background-color: #1f1f1f;
+}
+
+.dark-mode .about-section h2 {
+  color: #eee;
+}
+
+.dark-mode .about-content {
+  color: #ccc;
+}
+
+/* Cards Section */
+.cards-section {
+  padding: 60px 30px;
+  text-align: center;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.card {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-link {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Contact Section */
+#contact {
+  padding: 60px 30px;
+  text-align: center;
+}
+
+#contact a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+/* Footer */
+footer {
+  background-color: #eee;
+  padding: 20px;
+  text-align: center;
+  color: #333;
+}
+
+/* Dark Mode */
+.dark-mode {
+  background-color: #121212;
+  color: #eee;
+}
+
+.dark-mode .navbar {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.dark-mode .nav-links li a,
+.dark-mode .logo,
+.dark-mode #contact a {
+  color: #eee;
+}
+
+.dark-mode .card {
+  background-color: #1f1f1f;
+  color: #eee;
+}
+
+.dark-mode .card-link {
+  color: #90caf9;
+}
+
+.dark-mode footer {
+  background-color: #1a1a1a;
+}
